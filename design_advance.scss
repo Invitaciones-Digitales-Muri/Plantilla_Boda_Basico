@@ -1,76 +1,83 @@
+//====================================================
+//  Variables
+//====================================================
+$fuente-titulos: 'Great Vibes', cursive;
+$fuente-texto: 'Cormorant Garamond', serif;
 
-$font-base: Arial, sans-serif;
-$font-script: 'Great Vibes', cursive;
+$color-fondo-gris-claro: #e4e4e4;
 
-$color-white: #fff;
-$color-black: #000;
-$bg-body: #e4e4e4;
+$color-texto-blanco: #fff;
+$color-texto-negro: #000;
 
-$title-shadow-desktop: 4px 4px 0 $color-black;
-$title-shadow-mobile: 3px 3px 0 $color-black;
+$sombra-titulo-pc: 4px 4px 0 $color-texto-negro;
+$sombra-titulo-celular: 3px 3px 0 $color-texto-negro;
 
-
-/* Cuerpo del HTML */
+//====================================================
+//  Cuerpo de la pagina
+//====================================================
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    text-align:center;
-    background:#e4e4e4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: $color-fondo-gris-claro;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-/* Imagen de Portada */
+//====================================================
+//  Imagen de portada/encabezado con foto de los novios
+//====================================================
 .Imagen_Cabezera{
     position: relative;
     height: 100vh;
     overflow: hidden;
+
+    .foto-portada{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.05);
+        animation: zoomPortada 25s ease-in-out infinite alternate;
+    }
+    
+    .overlay{
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.2) 20%,
+            rgba(0,0,0,0.4) 40%,
+            rgba(0,0,0,0.6) 60%,
+            rgba(0,0,0,0.8) 80%,
+            rgba(0,0,0,1) 100%
+        );
+    }
+
+    .Titulo_Cabezera{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-texto-blanco;
+        text-align: center;
+        z-index: 2;
+        
+        h1{
+            font-family: $fuente-titulos;
+            font-size: 60px;
+            text-shadow: $sombra-titulo-pc;
+            white-space: nowrap;
+        }
+    }
 }
 
-.foto-portada{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.05);
-    animation: zoomPortada 25s ease-in-out infinite alternate;
-}
-
-.overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.2) 20%,
-        rgba(0,0,0,0.4) 40%,
-        rgba(0,0,0,0.6) 60%,
-        rgba(0,0,0,0.8) 80%,
-        rgba(0,0,0,1) 100%
-    );
-}
-
-/* Nombre de los novios de portada */
-.Titulo_Cabezera{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 2;
-}
-
-.Titulo_Cabezera h1{
-    font-family: 'Great Vibes', cursive;
-    font-size:60px;
-    text-shadow:4px 4px 0px black;
-    white-space: nowrap;
-}
-
-/* Mensaje de los novios para los invitados */
+//====================================================
+//  Mensaje de presentacion de los novios
+//====================================================
 .Mensaje_de_los_novios{
     padding: 0px;
-    font-size:19px;
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-family: $fuente-texto;
 }
 
 /* Divisor de secciones */
