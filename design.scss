@@ -78,6 +78,7 @@ body{
     padding: 0px;
     font-size: 19px;
     font-family: $fuente-texto;
+    text-align: center;
 }
 
 //====================================================
@@ -86,6 +87,7 @@ body{
 .Padres{
     padding-top: 20px;
     padding-bottom: 1px;
+    text-align: center;
 
     &_Novio,
     &_Novia{

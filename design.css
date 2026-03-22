@@ -46,11 +46,13 @@ body {
   padding: 0px;
   font-size: 19px;
   font-family: "Cormorant Garamond", serif;
+  text-align: center;
 }
 
 .Padres {
   padding-top: 20px;
   padding-bottom: 1px;
+  text-align: center;
 }
 .Padres_Novio h2, .Padres_Novia h2 {
   font-family: "Great Vibes", cursive;
