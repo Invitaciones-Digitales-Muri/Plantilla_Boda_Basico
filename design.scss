@@ -270,6 +270,24 @@ body{
         margin-bottom: 20px; 
     }
 }
+.Imagen_Recepcion,
+.Imagen_Ceremonia{
+    max-width: 100%;
+    display: block;
+    margin: 0px auto;
+    height: auto;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
+
+    &.Imagen_Ceremonia{
+        width: 500px;
+        margin-top: 0px;
+    }
+
+    &.Imagen_Recepcion{
+        width: 500px;
+        margin-top: 0px;
+    }
+}
 
 .Icono_Iglesia,
 .Icono_Casino{
@@ -279,7 +297,7 @@ body{
 
     &.Icono_Iglesia{
         width: 100px;
-        margin-top: -30px;
+        margin-top: 0px;
     }
 
     &.Icono_Casino{
