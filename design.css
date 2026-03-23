@@ -99,7 +99,6 @@ body {
 
 .Galeria {
   text-align: center;
-  padding: 10px;
 }
 .Galeria h2 {
   font-family: "Great Vibes", cursive;
@@ -349,7 +348,7 @@ body {
 /* Ayudas visuales para dispositivos móviles */
 @media (max-width: 600px) {
   .Titulo_Cabezera h1 {
-    font-size: 40px;
+    font-size: 45px;
     text-shadow: 3px 3px 0px black;
   }
   .slider {
