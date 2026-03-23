@@ -449,36 +449,37 @@ body{
 /* Ayudas visuales para dispositivos móviles */
 @media (max-width:600px){
     .Titulo_Cabezera h1{
-        font-size:40px;
-        text-shadow:3px 3px 0px black;
+        font-size: 35px;
+        text-shadow: 3px 3px 0px black;
     }
 
     .slider{
-        max-width:92vw;
-        margin:24px auto;
-        overflow:hidden;
+        max-width: 92vw;
+        margin: 24px auto;
+        padding: 20px;
+        overflow: hidden;
         box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
     }
 
     .slides_galeria{
-        display:flex;
-        transition:transform 1s ease;
+        display: flex;
+        transition: transform 1s ease;
     }
 
     .slide{
-        width:100%;
-        flex-shrink:0;
-        height:450px;
-        object-fit:cover;
+        width: 100%;
+        flex-shrink: 0;
+        height: 450px;
+        object-fit: cover;
     }
 
     .modal-contenido{
-        width:95%;
-        padding:10px;
+        width: 95%;
+        padding: 10px;
     }
 
     .formulario-iframe{
-        height:70vh;
+        height: 70vh;
     }
 }
 
