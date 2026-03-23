@@ -3,6 +3,9 @@
 //====================================================
 $fuente-titulos: 'Great Vibes', cursive;
 $fuente-texto: 'Cormorant Garamond', serif;
+$size-titulos: 45px;
+$size-texto: 25px;
+$size-boton: 20px;
 
 $color-fondo-gris-claro: #e4e4e4;
 
@@ -62,7 +65,7 @@ body{
         
         h1{
             font-family: $fuente-titulos;
-            font-size: 50px;
+            font-size: 60px;
             text-shadow: $sombra-titulo-pc;
             white-space: nowrap;
         }
@@ -73,7 +76,7 @@ body{
 //  Mensaje de presentacion de los novios
 //====================================================
 .Mensaje_de_los_novios{
-    font-size: 19px;
+    font-size: $size-texto;
     font-family: $fuente-texto;
     text-align: center;
 }
@@ -88,13 +91,13 @@ body{
     &_Novia{
         h2{
             font-family: $fuente-titulos;
-            font-size: 35px;
+            font-size: $size-titulos;
             margin-top: 10px;
         }
 
         p{
             font-family: $fuente-texto;
-            font-size: 19px;
+            font-size: $size-texto;
             margin-top: -25px;
         }
     }
@@ -157,7 +160,7 @@ body{
 
     h2{
         font-family: $fuente-titulos;
-        font-size: 45px;
+        font-size: $size-titulos;
     }
 
     .slider{
@@ -237,18 +240,18 @@ body{
 
     h2 {
         font-family: $fuente-titulos;
-        font-size: 45px;
+        font-size: $size-titulos;
         margin: 0px 0px 20px 0px;
     }
 
     h3 {
         font-family: $fuente-titulos;
-        font-size: 45px;
+        font-size: $size-titulos;
     }
 
     p {
         font-family: $fuente-texto;
-        font-size: 19px;
+        font-size: $size-texto;
         margin-top: -10px;
     }
 }
@@ -295,12 +298,12 @@ body{
 
     h2{
         font-family: $fuente-titulos;
-        font-size: 45px;
+        font-size: $size-titulos;
     }
 
     p{
         font-family: $fuente-texto;
-        font-size: 45px;
+        font-size: $size-titulos;
     }
 }
 
@@ -312,12 +315,12 @@ body{
 
     h2{
         font-family: $fuente-titulos;
-        font-size: 45px;
+        font-size: $size-titulos;
     }
 
     p{
         font-family: $fuente-texto;
-        font-size: 20px;
+        font-size: $size-texto;
     }
 
     .modal{
@@ -374,7 +377,7 @@ body{
 
     p{
         font-family: $fuente-texto;
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
@@ -383,6 +386,7 @@ body{
 //====================================================
 .boton{
     font-family: $fuente-texto;
+    font-size: $size-boton;
     display: inline-block;
     margin-bottom: 0px;
     padding: 12px 25px;
@@ -404,6 +408,7 @@ body{
 
 .botonFormulario{
     font-family: $fuente-texto;
+    font-size: $size-boton;
     display: inline-block;
     margin-bottom: 30px;
     padding: 12px 25px;
