@@ -1,15 +1,17 @@
-@charset "UTF-8";
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center;
   background: #e4e4e4;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .Imagen_Cabezera {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
 }
 .Imagen_Cabezera .foto-portada {
   width: 100%;
@@ -24,57 +26,45 @@ body {
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.8) 80%, rgb(0, 0, 0) 100%);
 }
-.Imagen_Cabezera .Titulo_Cabezera {
+
+.Titulo_Cabezera {
   position: absolute;
-  top: 75%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
-  z-index: 2;
+  z-index: 5;
 }
-.Imagen_Cabezera .Titulo_Cabezera h1 {
+.Titulo_Cabezera h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 60px;
+  font-size: 45px;
   text-shadow: 4px 4px 0 #000;
   white-space: nowrap;
+  margin: 0;
+}
+.Titulo_Cabezera p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  text-shadow: 4px 4px 0 #000;
+  white-space: nowrap;
+  margin: 0;
 }
 
 .Mensaje_de_los_novios {
-  font-size: 25px;
-  font-family: "Cormorant Garamond", serif;
-  text-align: center;
-}
-
-.Padres {
-  text-align: center;
-}
-.Padres_Novio h2, .Padres_Novia h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 45px;
-  margin-top: 10px;
-}
-.Padres_Novio p, .Padres_Novia p {
+  padding: 0;
   font-family: "Cormorant Garamond", serif;
   font-size: 25px;
-  margin-top: -25px;
-}
-
-.Imagen_Novio,
-.Imagen_Novia {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px; /* Ajusta según necesites */
 }
 
 .Novios {
-  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
 }
 .Novios h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 45px;
-  margin-bottom: 50px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin-top: -25px;
 }
 .Novios p {
   font-family: "Cormorant Garamond", serif;
@@ -82,173 +72,199 @@ body {
   margin-top: -25px;
 }
 
-.img-placeholder {
-  width: 300px;
-  max-width: 90%;
-  height: 450px;
-  background-image: url("https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Novios/Novios_2_300x450.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+.Padres {
+  padding-top: 20px;
+  padding-bottom: 1px;
+}
+.Padres .Padres_Novio h2,
+.Padres .Padres_Novia h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 45px;
+  margin-top: 10px;
+}
+.Padres .Padres_Novio p,
+.Padres .Padres_Novia p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin-top: -25px;
+}
+.Padres .Imagen_Novio,
+.Padres .Imagen_Novia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 .Galeria {
-  margin-top: -40px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 10px;
+  margin-bottom: 0;
 }
 .Galeria h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
+  margin: 0;
 }
 .Galeria .slider {
   position: relative;
   max-width: 500px;
-  margin: 15px;
+  margin: 40px auto;
   overflow: hidden;
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
 }
-.Galeria .slider .slides_galeria {
+.Galeria .slides_galeria {
   display: flex;
+  gap: 0;
   transition: transform 1s ease;
   will-change: transform;
-  gap: 0; /* sin espacios entre slides */
-  backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
+  backface-visibility: hidden;
   transform: translateZ(0);
 }
-.Galeria .slider .slide {
-  margin: 0;
-  width: 100%;
+.Galeria .slide {
   flex: 0 0 100%;
+  width: 100%;
   aspect-ratio: 2/3;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  margin: 0;
 }
-.Galeria .slider img {
+.Galeria img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-.Galeria .slider .boton_galeria {
+.Galeria .boton_galeria {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: transform 0.2s;
   background: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #fff;
   border: none;
   font-size: 28px;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
 }
-.Galeria .slider .boton_galeria:active {
-  transform: scale(0.9);
-}
-.Galeria .slider .boton_galeria:hover {
+.Galeria .boton_galeria:hover {
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
 }
-.Galeria .slider .atras {
+.Galeria .boton_galeria:active {
+  transform: translateY(-50%) scale(0.9);
+}
+.Galeria .boton_galeria.atras {
   left: 10px;
 }
-.Galeria .slider .siguiente {
+.Galeria .boton_galeria.siguiente {
   right: 10px;
 }
 
 .section {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 20px;
+  margin: 0;
 }
 .section h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
-  margin: 0px 0px 20px 0px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .section h3 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 .section p {
   font-family: "Cormorant Garamond", serif;
   font-size: 25px;
-  margin-top: -10px;
+  margin-top: -25px;
 }
 
 .evento {
-  text-align: center;
-  background: white;
+  background: #fff;
   padding: 40px;
-  margin: 15px 15px 15px 15px;
-  border-radius: 10px;
+  margin: 0 auto 30px;
   max-width: 500px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .evento h3 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-
-.Imagen_Recepcion,
-.Imagen_Ceremonia {
+.evento .Imagen_Ceremonia,
+.evento .Imagen_Recepcion {
   max-width: 100%;
   display: block;
-  margin: 0px auto;
+  margin: 0 auto;
   height: auto;
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
 }
-.Imagen_Recepcion.Imagen_Ceremonia,
-.Imagen_Ceremonia.Imagen_Ceremonia {
-  width: 500px;
-  margin-top: 0px;
-}
-.Imagen_Recepcion.Imagen_Recepcion,
-.Imagen_Ceremonia.Imagen_Recepcion {
-  width: 500px;
-  margin-top: 0px;
-}
-
-.Icono_Iglesia,
-.Icono_Casino {
+.evento .Icono_Iglesia {
   display: flex;
-  margin: -50px auto;
+  margin: 0px auto;
   height: auto;
-}
-.Icono_Iglesia.Icono_Iglesia,
-.Icono_Casino.Icono_Iglesia {
   width: 100px;
-  margin-top: 0px;
+  margin-top: 0;
 }
-.Icono_Iglesia.Icono_Casino,
-.Icono_Casino.Icono_Casino {
+.evento .Icono_Casino {
+  display: flex;
+  margin: 0px auto;
+  height: auto;
+  width: 100px;
+  margin-top: 20px;
+}
+.evento .Icono_Vestimenta {
+  display: flex;
+  margin: 0px auto;
+  height: auto;
   width: 60px;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
-.Logo_Novios {
-  text-align: center;
-}
-.Logo_Novios h2 {
-  white-space: nowrap;
-  font-family: "Great Vibes", cursive;
-  font-size: 45px;
-  margin: 0px;
-  text-shadow: 4px 4px 0 #000;
-}
-.Logo_Novios p {
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 45px;
-  margin: 0px;
-  text-shadow: 4px 4px 0 #000;
+  font-size: 20px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.boton:hover {
+  background: #333;
+}
+.boton:active {
+  transform: scale(0.97);
+}
+
+.botonWhatsapp {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 12px 25px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+.botonWhatsapp:hover {
+  background-color: #333;
+}
+.botonWhatsapp:active {
+  transform: scale(0.97);
 }
 
 .Confirmacion {
@@ -275,44 +291,32 @@ body {
   font-size: 17px;
 }
 
-.boton {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  display: inline-block;
-  margin-bottom: 0px;
-  padding: 12px 25px;
-  background: #111;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
-  cursor: pointer;
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 3;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 10px;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
 }
-.boton:hover {
-  background-color: #333;
+.scroll-indicator span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-top: 0;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: rotate(45deg);
+  animation: scrollAnim 1.8s infinite;
+  opacity: 0.8;
 }
-.boton:active {
-  transform: scale(0.97);
-}
-
-.botonWhatsapp {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  display: inline-block;
-  margin-bottom: 30px;
-  padding: 12px 25px;
-  background: #111;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
-  cursor: pointer;
-}
-.botonWhatsapp:hover {
-  background-color: #333;
-}
-.botonWhatsapp:active {
-  transform: scale(0.97);
+.scroll-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
 }
 
 .divisor {

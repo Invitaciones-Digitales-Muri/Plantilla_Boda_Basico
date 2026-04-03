@@ -1,37 +1,40 @@
 //====================================================
 //  Variables
 //====================================================
-$fuente-titulos: 'Great Vibes', cursive;
-$fuente-texto: 'Cormorant Garamond', serif;
+$font-titulos: 'Great Vibes', cursive;
+$font-texto: 'Cormorant Garamond', serif;
+
 $size-titulos: 45px;
 $size-texto: 25px;
 $size-boton: 20px;
 
-$color-fondo-gris-claro: #e4e4e4;
+$color-grisclaro: #e4e4e4;
+$color-blanco: #fff;
+$color-negro: #000;
 
-$color-texto-blanco: #fff;
-$color-texto-negro: #000;
-
-$sombra-titulo-pc: 4px 4px 0 $color-texto-negro;
-$sombra-titulo-celular: 3px 3px 0 $color-texto-negro;
+$shadow-titulo-pc: 4px 4px 0 $color-negro;
+$shadow-titulo-movil: 3px 3px 0 $color-negro;
 
 //====================================================
 //  Cuerpo de la pagina
 //====================================================
 body{
-    background: $color-fondo-gris-claro;
-    margin: 0px;
-    width: 100%;
-    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    background: $color-grisclaro;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 //====================================================
-//  Imagen de portada/encabezado con foto de los novios
+//  Imagen de portada
 //====================================================
 .Imagen_Cabezera{
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background-color: $color-negro;
 
     .foto-portada{
         width: 100%;
@@ -53,22 +56,34 @@ body{
             rgba(0,0,0,1) 100%
         );
     }
+}
 
-    .Titulo_Cabezera{
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: $color-texto-blanco;
-        text-align: center;
-        z-index: 2;
+// ================================================
+// Nombre de los novios de portada
+// ================================================
+.Titulo_Cabezera{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-blanco;
+    text-align: center;
+    z-index: 5;
         
-        h1{
-            font-family: $fuente-titulos;
-            font-size: 60px;
-            text-shadow: $sombra-titulo-pc;
-            white-space: nowrap;
-        }
+    h1{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        text-shadow: $shadow-titulo-pc;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+        text-shadow: $shadow-titulo-pc;
+        white-space: nowrap;
+        margin: 0;
     }
 }
 
@@ -76,181 +91,166 @@ body{
 //  Mensaje de presentacion de los novios
 //====================================================
 .Mensaje_de_los_novios{
+    padding: 0;
+    font-family: $font-texto;
     font-size: $size-texto;
-    font-family: $fuente-texto;
-    text-align: center;
 }
 
 //====================================================
-//  Padres de los novios
-//====================================================
-.Padres{
-    text-align: center;
-
-    &_Novio,
-    &_Novia{
-        h2{
-            font-family: $fuente-titulos;
-            font-size: $size-titulos;
-            margin-top: 10px;
-        }
-
-        p{
-            font-family: $fuente-texto;
-            font-size: $size-texto;
-            margin-top: -25px;
-        }
-    }
-}
-
-.Imagen_Novio,
-.Imagen_Novia{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Ajusta según necesites */
-}
-
-//====================================================
-//  Seccion Novios
+//  Presentacion Novios
 //====================================================
 .Novios{
-    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
 
     h2{
-        font-family: $fuente-titulos;
-        font-size: $size-titulos;
-        margin-bottom: 50px;
+        font-family: $font-texto;
+        font-size: $size-texto;
+        margin-top: -25px;
     }
 
     p{
-        font-family: $fuente-texto;
+        font-family: $font-texto;
         font-size: $size-texto;
         margin-top: -25px;
     }
 }
 
 //====================================================
-//  Imagen Novios (foto de los novios en la seccion de presentacion)
+//  Padres de los novios
 //====================================================
-.img-placeholder{
-    width:300px;
-    max-width:90%;
-    height:450px;
-    background-image: url("https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Novios/Novios_2_300x450.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+.Padres{
+    padding-top: 20px;
+    padding-bottom: 1px;
+
+    .Padres_Novio,
+    .Padres_Novia{
+        h2{
+            font-family: $font-titulos;
+            font-size: $size-titulos;
+            margin-top: 10px;
+        }
+
+        p{
+            font-family: $font-texto;
+            font-size: $size-texto;
+            margin-top: -25px;
+        }
+    }
+
+    .Imagen_Novio,
+    .Imagen_Novia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
 }
 
 //====================================================
 //  Galeria de fotos de novios
 //====================================================
 .Galeria{
-    margin-top: -40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    margin-bottom: 0;
 
     h2{
-        font-family: $fuente-titulos;
+        font-family: $font-titulos;
         font-size: $size-titulos;
+        margin: 0;
     }
 
     .slider{
         position: relative;
-        max-width:500px;
-        margin: 15px;
-        overflow:hidden;
-        box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
+        max-width: 500px;
+        margin: 40px auto;
+        overflow: hidden;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
+    }
 
-        .slides_galeria{
-            display: flex;
-            transition: transform 1s ease;
-            will-change: transform;
-            gap: 0;                      /* sin espacios entre slides */
-            backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
-            transform: translateZ(0);
+    .slides_galeria{
+        display: flex;
+        gap: 0;
+        transition: transform 1s ease;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+
+    .slide{
+        flex: 0 0 100%;
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .boton_galeria{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: $color-blanco;
+        border: none;
+        font-size: 28px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+        transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+
+        &:hover{
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
         }
 
-        .slide{
-            margin: 0;
-            width:100%;
-            flex:0 0 100%;
-            aspect-ratio: 2 / 3;
-            height:auto;
-            object-fit:cover;
-            display: block;
+        &:active{
+            transform: translateY(-50%) scale(0.9);
         }
 
-        img{
-            max-width: 100%;
-            height: auto;
-            display: block;
+        &.atras{
+        left: 10px;
         }
 
-        .boton_galeria{
-            position:absolute;
-            top:50%;
-            transform: translateY(-50%);
-            transition: transform .2s;
-            background:rgba(0,0,0,0.5);
-            color:white;
-            border:none;
-            font-size:28px;
-            padding:10px 15px;
-            cursor:pointer;
-            border-radius:50%;
-            z-index:10;
-
-            &:active{
-                transform: scale(0.9);
-            }
-
-            &:hover{
-                background:rgba(0,0,0,0.7);
-                box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
-            }
-        }
-
-        .atras{
-            left:10px;
-        }
-
-        .siguiente{
-            right:10px;
+        &.siguiente{
+        right: 10px;
         }
     }
 }
 
 //====================================================
-//  Cuadro de informacion del evento
+//  Seccion detalles del evento
 //====================================================
 .section{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
+    margin: 0;
 
-    h2 {
-        font-family: $fuente-titulos;
+    h2{
+        font-family: $font-titulos;
         font-size: $size-titulos;
-        margin: 0px 0px 20px 0px;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
-    h3 {
-        font-family: $fuente-titulos;
+    h3{
+        font-family: $font-titulos;
         font-size: $size-titulos;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
-    p {
-        font-family: $fuente-texto;
+    p{
+        font-family: $font-texto;
         font-size: $size-texto;
-        margin-top: -10px;
+        margin-top: -25px;
     }
 }
 
@@ -258,127 +258,70 @@ body{
 //  Detalle del evento (lugar, fecha, hora, etc)
 //====================================================
 .evento{
-    text-align: center;
-    background:white;
-    padding:40px;
-    margin: 15px 15px 15px 15px;
-    border-radius:10px;
-    max-width:500px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    background: $color-blanco;
+    padding: 40px;
+    margin: 0 auto 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     h3{
-        margin-bottom: 20px; 
-    }
-}
-.Imagen_Recepcion,
-.Imagen_Ceremonia{
-    max-width: 100%;
-    display: block;
-    margin: 0px auto;
-    height: auto;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
-
-    &.Imagen_Ceremonia{
-        width: 500px;
-        margin-top: 0px;
+        margin-bottom: 40px;
     }
 
-    &.Imagen_Recepcion{
-        width: 500px;
-        margin-top: 0px;
+    .Imagen_Ceremonia,
+    .Imagen_Recepcion{
+        max-width: 100%;        
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
     }
-}
 
-.Icono_Iglesia,
-.Icono_Casino{
-    display: flex;
-    margin: -50px auto;
-    height: auto;
-
-    &.Icono_Iglesia{
+    .Icono_Iglesia{
+        display: flex;
+        margin: 0px auto;
+        height: auto;
         width: 100px;
-        margin-top: 0px;
+        margin-top: 0
     }
 
-    &.Icono_Casino{
+    .Icono_Casino{
+        display: flex;
+        margin: 0px auto;
+        height: auto;
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .Icono_Vestimenta{
+        display: flex;
+        margin: 0px auto;
+        height: auto;
         width: 60px;
-        margin-top: 30px;
-    }
-}
-
-//====================================================
-//  Logos de los novios
-//====================================================
-.Logo_Novios{
-    text-align: center;
-
-    h2{
-        white-space: nowrap;
-        font-family: $fuente-titulos;
-        font-size: $size-titulos;
-        margin: 0px;
-        text-shadow: $sombra-titulo-pc;
-    }
-
-    p{
-        font-family: $fuente-texto;
-        font-size: $size-titulos;
-        margin: 0px;
-        text-shadow: $sombra-titulo-pc;
-    }
-}
-
-//====================================================
-//  Confirmacion de asistencia (Formulario)
-//====================================================
-.Confirmacion{
-    text-align: center;
-
-    h2{
-        font-family: $fuente-titulos;
-        font-size: $size-titulos;
-    }
-
-    p{
-        font-family: $fuente-texto;
-        font-size: $size-texto;
-    }
-}
-
-//====================================================
-//  Pie de pagina
-//====================================================
-.Pie_de_pagina{
-    text-align: center;
-    background-color: #000;
-    color: white;
-    padding-top: 1px;
-    padding-bottom: 1px;
-
-    p{
-        font-family: $fuente-texto;
-        font-size: 17px;
+        margin-top: 0;
     }
 }
 
 //====================================================
 //  Botones (Todos)
 //====================================================
-.boton{
-    font-family: $fuente-texto;
-    font-size: $size-boton;
+.boton {
     display: inline-block;
-    margin-bottom: 0px;
+    margin-top: 20px;
     padding: 12px 25px;
+    font-family: $font-texto;
+    font-size: $size-boton;
     background: #111;
-    color: white;
+    color: $color-blanco;
     text-decoration: none;
-    border-radius :5px;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
     cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
 
     &:hover {
-        background-color: #333;
+        background: #333;
     }
 
     &:active {
@@ -387,7 +330,7 @@ body{
 }
 
 .botonWhatsapp{
-    font-family: $fuente-texto;
+    font-family: $font-texto;
     font-size: $size-boton;
     display: inline-block;
     margin-bottom: 30px;
@@ -405,6 +348,72 @@ body{
 
     &:active {
         transform: scale(0.97);
+    }
+}
+
+//====================================================
+//  Confirmacion de asistencia (Formulario)
+//====================================================
+.Confirmacion{
+    text-align: center;
+
+    h2{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+    }
+}
+
+//====================================================
+//  Pie de pagina
+//====================================================
+.Pie_de_pagina{
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    p{
+        font-family: $font-texto;
+        font-size: 17px;
+    }
+}
+
+// ================================================
+// Scroll indicador
+// ================================================
+.scroll-indicator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    z-index: 3;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 10px;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+
+    span{
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-top: 0;
+        border-bottom: 4px solid $color-blanco;
+        border-right: 4px solid $color-blanco;
+        transform: rotate(45deg);
+        animation: scrollAnim 1.8s infinite;
+        opacity: 0.8;
+
+        &:nth-child(2) {
+        animation-delay: 0.2s;
+        }
     }
 }
 
@@ -445,7 +454,7 @@ body{
 @media (max-width:600px){
     .Titulo_Cabezera h1{
         font-size: 55px;
-        text-shadow: $sombra-titulo-celular;
+        text-shadow: $shadow-titulo-movil;
     }
 
     .Logo_Novios{
@@ -453,17 +462,17 @@ body{
 
         h2{
             white-space: nowrap;
-            font-family: $fuente-titulos;
+            font-family: $font-titulos;
             font-size: $size-titulos;
             margin: 0px;
-            text-shadow: $sombra-titulo-celular;
+            text-shadow: $shadow-titulo-movil;
         }
 
         p{
-            font-family: $fuente-texto;
+            font-family: $font-texto;
             font-size: $size-titulos;
             margin: 0px;
-            text-shadow: $sombra-titulo-celular;
+            text-shadow: $shadow-titulo-movil;
         }
     }
 
