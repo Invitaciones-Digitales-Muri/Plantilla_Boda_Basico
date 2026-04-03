@@ -1,11 +1,16 @@
 Wedding Template Bronze - Classic Elegance
 
 Incluye:
-  1. 4 Meses visible.
-  2. Diseño Basico.
-  3. Mensaje de presentacion (Frase elegida por los novios).
-  4. Seccion de padres.
-  5. Fotos en invitacion ya sea tipo galeria o a lo largo de la invitacion (4 Max).
-  6. Lugar de Ceremonia.
-  7. Lugar de Recepcion.
-  8. Confirmacion por Whatsapp.
+  1. Tiempo Visible: 4 Meses visible.
+  2. Tipo de Diseño: Basico.
+  3. Portada: Foto de Novios.
+  4. Mensaje de Presentacion (Frase elegida por los novios).
+  5. Seccion de Padres.
+  6. Fotos en Invitación: Tipo Galería o Tipo Extendido (4 Max).
+  7. Lugar de Ceremonia.
+  8. Lugar de Recepcion.
+  9. Confirmacion por Whatsapp.
+
+Toda invitacion incluye:
+  1. Seccion Novios.
+  2. Pie de Pagina.
