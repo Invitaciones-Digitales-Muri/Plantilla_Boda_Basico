@@ -1,4 +1,6 @@
+// =========================================================
 // ========= Movimiento de slides de galeria ===============
+// =========================================================
 const slides = document.querySelector(".slides_galeria");
 const slideList = document.querySelectorAll(".slide");
 
